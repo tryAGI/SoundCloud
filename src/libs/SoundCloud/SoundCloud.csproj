@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>Modern generated C# SDK for the complete SoundCloud Public API, including discovery, streaming, playlists, likes, reposts, and user libraries.</Description>
+    <PackageTags>soundcloud;music;audio;streaming;api;client;sdk;dotnet;autosdk;openapi</PackageTags>
+  </PropertyGroup>
+
+</Project>
