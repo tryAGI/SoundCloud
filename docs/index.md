@@ -34,6 +34,10 @@
 
 ## Usage
 
+```shell
+dotnet add package SoundCloud
+```
+
 ```csharp
 using SoundCloud;
 
