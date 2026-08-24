@@ -27,11 +27,11 @@ namespace SoundCloud
             };
         partial void PrepareCreatesAPlaylistArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::SoundCloud.CreateUpdatePlaylistRequest request);
+            global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object> request);
         partial void PrepareCreatesAPlaylistRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::SoundCloud.CreateUpdatePlaylistRequest request);
+            global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object> request);
         partial void ProcessCreatesAPlaylistResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -50,7 +50,7 @@ namespace SoundCloud
         /// <exception cref="global::SoundCloud.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::SoundCloud.Playlist> CreatesAPlaylistAsync(
 
-            global::SoundCloud.CreateUpdatePlaylistRequest request,
+            global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object> request,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,12 +72,10 @@ namespace SoundCloud
         /// <exception cref="global::SoundCloud.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.Playlist>> CreatesAPlaylistAsResponseAsync(
 
-            global::SoundCloud.CreateUpdatePlaylistRequest request,
+            global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object> request,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
             PrepareCreatesAPlaylistArguments(
@@ -102,7 +100,7 @@ namespace SoundCloud
             var __maxAttempts = global::SoundCloud.AutoSDKRequestOptionsSupport.GetMaxAttempts(
                 clientOptions: Options,
                 requestOptions: requestOptions,
-                supportsRetry: true);
+                supportsRetry: false);
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
@@ -139,12 +137,11 @@ namespace SoundCloud
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
+
+                            var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
+
                             __httpRequest.Content = __httpRequestContent;
+
                 global::SoundCloud.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -508,18 +505,15 @@ namespace SoundCloud
         /// <summary>
         /// Creates a playlist.
         /// </summary>
-        /// <param name="playlist"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::SoundCloud.Playlist> CreatesAPlaylistAsync(
-            global::SoundCloud.CreateUpdatePlaylistRequestPlaylist? playlist = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::SoundCloud.CreateUpdatePlaylistRequest
+            var __request = new global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object>
             {
-                Playlist = playlist,
             };
 
             return await CreatesAPlaylistAsync(

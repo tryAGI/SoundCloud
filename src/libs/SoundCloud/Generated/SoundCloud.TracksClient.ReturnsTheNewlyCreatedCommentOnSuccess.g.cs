@@ -27,13 +27,11 @@ namespace SoundCloud
             };
         partial void PrepareReturnsTheNewlyCreatedCommentOnSuccessArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string trackUrn,
-            global::SoundCloud.CreateTracksCommentsRequest request);
+            ref string trackUrn);
         partial void PrepareReturnsTheNewlyCreatedCommentOnSuccessRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string trackUrn,
-            global::SoundCloud.CreateTracksCommentsRequest request);
+            string trackUrn);
         partial void ProcessReturnsTheNewlyCreatedCommentOnSuccessResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -47,21 +45,16 @@ namespace SoundCloud
         /// Returns the newly created comment on success
         /// </summary>
         /// <param name="trackUrn"></param>
-        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SoundCloud.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::SoundCloud.Comment> ReturnsTheNewlyCreatedCommentOnSuccessAsync(
             string trackUrn,
-
-            global::SoundCloud.CreateTracksCommentsRequest request,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await ReturnsTheNewlyCreatedCommentOnSuccessAsResponseAsync(
                 trackUrn: trackUrn,
-
-                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -72,25 +65,19 @@ namespace SoundCloud
         /// Returns the newly created comment on success
         /// </summary>
         /// <param name="trackUrn"></param>
-        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SoundCloud.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.Comment>> ReturnsTheNewlyCreatedCommentOnSuccessAsResponseAsync(
             string trackUrn,
-
-            global::SoundCloud.CreateTracksCommentsRequest request,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
             PrepareReturnsTheNewlyCreatedCommentOnSuccessArguments(
                 httpClient: HttpClient,
-                trackUrn: ref trackUrn,
-                request: request);
+                trackUrn: ref trackUrn);
 
 
             var __authorizations = global::SoundCloud.EndPointSecurityResolver.ResolveAuthorizations(
@@ -147,12 +134,6 @@ namespace SoundCloud
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json; charset=utf-8");
-                            __httpRequest.Content = __httpRequestContent;
                 global::SoundCloud.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -164,8 +145,7 @@ namespace SoundCloud
                 PrepareReturnsTheNewlyCreatedCommentOnSuccessRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    trackUrn: trackUrn!,
-                    request: request);
+                    trackUrn: trackUrn!);
 
                 return __httpRequest;
             }
@@ -513,31 +493,6 @@ namespace SoundCloud
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Returns the newly created comment on success
-        /// </summary>
-        /// <param name="trackUrn"></param>
-        /// <param name="comment"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::SoundCloud.Comment> ReturnsTheNewlyCreatedCommentOnSuccessAsync(
-            string trackUrn,
-            global::SoundCloud.CreateTracksCommentsRequestComment? comment = default,
-            global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::SoundCloud.CreateTracksCommentsRequest
-            {
-                Comment = comment,
-            };
-
-            return await ReturnsTheNewlyCreatedCommentOnSuccessAsync(
-                trackUrn: trackUrn,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
