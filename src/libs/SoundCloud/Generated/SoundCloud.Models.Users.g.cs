@@ -4,18 +4,18 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Users
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collection")]
         public global::System.Collections.Generic.IList<global::SoundCloud.User>? Collection { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("next_href")]
         public string? NextHref { get; set; }

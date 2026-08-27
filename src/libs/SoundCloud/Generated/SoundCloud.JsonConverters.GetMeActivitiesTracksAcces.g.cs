@@ -20,7 +20,7 @@ namespace SoundCloud.JsonConverters
                     {
                         return global::SoundCloud.GetMeActivitiesTracksAccesExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

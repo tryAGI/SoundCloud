@@ -4,24 +4,24 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Streams
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hls_aac_160_url")]
         public string? HlsAac160Url { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hls_mp3_128_url")]
         public string? HlsMp3128Url { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("preview_mp3_128_url")]
         public string? PreviewMp3128Url { get; set; }

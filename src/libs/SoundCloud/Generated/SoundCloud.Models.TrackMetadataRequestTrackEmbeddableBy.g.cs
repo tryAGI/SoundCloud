@@ -9,15 +9,15 @@ namespace SoundCloud
     public enum TrackMetadataRequestTrackEmbeddableBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Me,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

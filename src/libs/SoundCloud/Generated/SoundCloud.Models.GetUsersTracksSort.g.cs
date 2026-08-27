@@ -9,11 +9,11 @@ namespace SoundCloud
     public enum GetUsersTracksSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

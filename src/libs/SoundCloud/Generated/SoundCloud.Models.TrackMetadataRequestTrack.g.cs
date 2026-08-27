@@ -4,18 +4,18 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TrackMetadataRequestTrack
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         public string? Title { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permalink")]
         public string? Permalink { get; set; }
@@ -35,19 +35,19 @@ namespace SoundCloud
         public global::SoundCloud.TrackMetadataRequestTrackEmbeddableBy? EmbeddableBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("purchase_url")]
         public string? PurchaseUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("genre")]
         public string? Genre { get; set; }
@@ -59,13 +59,13 @@ namespace SoundCloud
         public string? TagList { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("label_name")]
         public string? LabelName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("release")]
         public string? Release { get; set; }
@@ -114,7 +114,7 @@ namespace SoundCloud
         public bool? RevealComments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isrc")]
         public string? Isrc { get; set; }

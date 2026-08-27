@@ -4,20 +4,20 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetUsersLikesTracksAcces
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preview,
     }

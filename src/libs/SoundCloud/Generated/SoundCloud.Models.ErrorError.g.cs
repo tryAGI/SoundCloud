@@ -4,12 +4,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ErrorError
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error_message")]
         public string? ErrorMessage { get; set; }

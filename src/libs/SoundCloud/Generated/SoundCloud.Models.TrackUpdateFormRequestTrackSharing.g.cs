@@ -9,11 +9,11 @@ namespace SoundCloud
     public enum TrackUpdateFormRequestTrackSharing
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

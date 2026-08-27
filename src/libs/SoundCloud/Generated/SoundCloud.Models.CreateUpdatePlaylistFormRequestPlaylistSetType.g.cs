@@ -4,16 +4,16 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateUpdatePlaylistFormRequestPlaylistSetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Album,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playlist,
     }

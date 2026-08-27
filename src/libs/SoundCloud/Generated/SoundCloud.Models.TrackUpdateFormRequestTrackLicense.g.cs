@@ -4,40 +4,40 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TrackUpdateFormRequestTrackLicense
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AllRightsReserved,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcNd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcSa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBySa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoRightsReserved,
     }

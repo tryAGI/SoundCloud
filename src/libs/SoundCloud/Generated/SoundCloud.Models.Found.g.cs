@@ -4,7 +4,7 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Found
     {

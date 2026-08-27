@@ -10,15 +10,15 @@ namespace SoundCloud
     public enum OAuthTokenGrantType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthorizationCode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClientCredentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RefreshToken,
     }

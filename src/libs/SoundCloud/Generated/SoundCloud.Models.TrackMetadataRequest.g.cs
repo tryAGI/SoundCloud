@@ -4,12 +4,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TrackMetadataRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track")]
         public global::SoundCloud.TrackMetadataRequestTrack? Track { get; set; }

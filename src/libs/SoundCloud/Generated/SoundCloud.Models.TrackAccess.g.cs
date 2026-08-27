@@ -12,15 +12,15 @@ namespace SoundCloud
     public enum TrackAccess
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preview,
     }
