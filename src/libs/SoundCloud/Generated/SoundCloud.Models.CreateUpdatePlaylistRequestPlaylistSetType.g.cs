@@ -9,11 +9,11 @@ namespace SoundCloud
     public enum CreateUpdatePlaylistRequestPlaylistSetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Album,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playlist,
     }

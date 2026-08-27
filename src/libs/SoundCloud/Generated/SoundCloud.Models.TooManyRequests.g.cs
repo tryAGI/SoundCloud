@@ -5,12 +5,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct TooManyRequests : global::System.IEquatable<TooManyRequests>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::SoundCloud.Error? Error { get; init; }
@@ -19,7 +19,7 @@ namespace SoundCloud
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Error))]
@@ -27,7 +27,7 @@ namespace SoundCloud
         public bool IsError => Error != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickError(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::SoundCloud.Error PickError() => IsError
             ? Error!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::SoundCloud.TooManyRequestsVariant2? TooManyRequestsVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace SoundCloud
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TooManyRequestsVariant2))]
@@ -64,7 +64,7 @@ namespace SoundCloud
         public bool IsTooManyRequestsVariant2 => TooManyRequestsVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTooManyRequestsVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::SoundCloud.TooManyRequestsVariant2 PickTooManyRequestsVariant2() => IsTooManyRequestsVariant2
             ? TooManyRequestsVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TooManyRequestsVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TooManyRequests(global::SoundCloud.Error value) => new TooManyRequests((global::SoundCloud.Error?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::SoundCloud.Error?(TooManyRequests @this) => @this.Error;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TooManyRequests(global::SoundCloud.Error? value)
         {
@@ -101,22 +101,22 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TooManyRequests FromError(global::SoundCloud.Error? value) => new TooManyRequests(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TooManyRequests(global::SoundCloud.TooManyRequestsVariant2 value) => new TooManyRequests((global::SoundCloud.TooManyRequestsVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::SoundCloud.TooManyRequestsVariant2?(TooManyRequests @this) => @this.TooManyRequestsVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TooManyRequests(global::SoundCloud.TooManyRequestsVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TooManyRequests FromTooManyRequestsVariant2(global::SoundCloud.TooManyRequestsVariant2? value) => new TooManyRequests(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TooManyRequests(
             global::SoundCloud.Error? error,
@@ -141,23 +141,23 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             TooManyRequestsVariant2 as object ??
-            Error as object 
+            Error as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Error?.ToString() ??
-            TooManyRequestsVariant2?.ToString() 
+            TooManyRequestsVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::SoundCloud.Error, TResult>? error = null,
@@ -190,7 +190,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::SoundCloud.Error>? error = null,
@@ -214,7 +214,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::SoundCloud.Error>? error = null,
@@ -237,7 +237,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(TooManyRequests other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::SoundCloud.Error?>.Default.Equals(Error, other.Error) &&
-                global::System.Collections.Generic.EqualityComparer<global::SoundCloud.TooManyRequestsVariant2?>.Default.Equals(TooManyRequestsVariant2, other.TooManyRequestsVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::SoundCloud.TooManyRequestsVariant2?>.Default.Equals(TooManyRequestsVariant2, other.TooManyRequestsVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(TooManyRequests obj1, TooManyRequests obj2)
         {
@@ -277,7 +277,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(TooManyRequests obj1, TooManyRequests obj2)
         {
@@ -285,7 +285,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

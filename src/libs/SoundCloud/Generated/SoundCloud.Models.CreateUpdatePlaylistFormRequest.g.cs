@@ -4,12 +4,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateUpdatePlaylistFormRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[title]")]
         public string? PlaylistTitle { get; set; }
@@ -22,7 +22,7 @@ namespace SoundCloud
         public global::SoundCloud.CreateUpdatePlaylistFormRequestPlaylistSharing? PlaylistSharing { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[description]")]
         public string? PlaylistDescription { get; set; }
@@ -34,86 +34,86 @@ namespace SoundCloud
         public string? PlaylistTracksUrn { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[artwork_data]")]
         public byte[]? PlaylistArtworkData { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[artwork_data]name")]
         public string? PlaylistArtworkDataname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[ean]")]
         public string? PlaylistEan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[genre]")]
         public string? PlaylistGenre { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[label_name]")]
         public string? PlaylistLabelName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[license]")]
         public string? PlaylistLicense { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[permalink]")]
         public string? PlaylistPermalink { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[permalink_url]")]
         public string? PlaylistPermalinkUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[purchase_title]")]
         public string? PlaylistPurchaseTitle { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[purchase_url]")]
         public string? PlaylistPurchaseUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[release]")]
         public string? PlaylistRelease { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[release_date]")]
         public string? PlaylistReleaseDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[set_type]")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::SoundCloud.JsonConverters.CreateUpdatePlaylistFormRequestPlaylistSetTypeJsonConverter))]
         public global::SoundCloud.CreateUpdatePlaylistFormRequestPlaylistSetType? PlaylistSetType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playlist[tag_list]")]
         public string? PlaylistTagList { get; set; }

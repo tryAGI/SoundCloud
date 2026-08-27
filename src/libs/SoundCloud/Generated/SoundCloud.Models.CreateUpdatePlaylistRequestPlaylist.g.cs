@@ -4,7 +4,7 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateUpdatePlaylistRequestPlaylist
     {
@@ -34,13 +34,13 @@ namespace SoundCloud
         public global::System.Collections.Generic.IList<global::SoundCloud.CreateUpdatePlaylistRequestPlaylistTrack>? Tracks { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("artwork_data")]
         public byte[]? ArtworkData { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("artwork_dataname")]
         public string? ArtworkDataname { get; set; }

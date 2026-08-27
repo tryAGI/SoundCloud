@@ -9,19 +9,19 @@ namespace SoundCloud
     public sealed partial class Activities
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collection")]
         public global::System.Collections.Generic.IList<global::SoundCloud.ActivitiesCollectionItem>? Collection { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("next_href")]
         public string? NextHref { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("future_href")]
         public string? FutureHref { get; set; }

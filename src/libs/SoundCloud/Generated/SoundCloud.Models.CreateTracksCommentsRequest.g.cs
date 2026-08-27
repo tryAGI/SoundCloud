@@ -4,12 +4,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateTracksCommentsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
         public global::SoundCloud.CreateTracksCommentsRequestComment? Comment { get; set; }

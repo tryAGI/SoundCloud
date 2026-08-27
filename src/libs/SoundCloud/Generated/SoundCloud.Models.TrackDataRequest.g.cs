@@ -4,12 +4,12 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TrackDataRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[title]")]
         public string? TrackTitle { get; set; }
@@ -21,19 +21,19 @@ namespace SoundCloud
         public string? TrackArtist { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[asset_data]")]
         public byte[]? TrackAssetData { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[asset_data]name")]
         public string? TrackAssetDataname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[permalink]")]
         public string? TrackPermalink { get; set; }
@@ -53,19 +53,19 @@ namespace SoundCloud
         public global::SoundCloud.TrackDataRequestTrackEmbeddableBy? TrackEmbeddableBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[purchase_url]")]
         public string? TrackPurchaseUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[description]")]
         public string? TrackDescription { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[genre]")]
         public string? TrackGenre { get; set; }
@@ -77,13 +77,13 @@ namespace SoundCloud
         public string? TrackTagList { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[label_name]")]
         public string? TrackLabelName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[release]")]
         public string? TrackRelease { get; set; }
@@ -132,19 +132,19 @@ namespace SoundCloud
         public bool? TrackRevealComments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[isrc]")]
         public string? TrackIsrc { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[artwork_data]")]
         public byte[]? TrackArtworkData { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("track[artwork_data]name")]
         public string? TrackArtworkDataname { get; set; }

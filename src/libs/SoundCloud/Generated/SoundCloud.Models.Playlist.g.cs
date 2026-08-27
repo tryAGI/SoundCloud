@@ -213,7 +213,7 @@ namespace SoundCloud
         public int? LikesCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("label")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::SoundCloud.JsonConverters.AllOfJsonConverter<object, global::SoundCloud.User>))]

@@ -211,7 +211,7 @@ namespace SoundCloud
         public string? Uri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::SoundCloud.JsonConverters.AllOfJsonConverter<global::SoundCloud.User, object>))]

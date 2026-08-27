@@ -9,43 +9,43 @@ namespace SoundCloud
     public enum StorefrontType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apparel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cassette,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Digital,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveEvent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LiveStream,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SamplePack,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vinyl,
     }

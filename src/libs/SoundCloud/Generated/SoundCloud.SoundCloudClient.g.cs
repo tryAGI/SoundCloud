@@ -12,7 +12,7 @@ namespace SoundCloud
     public sealed partial class SoundCloudClient : global::SoundCloud.ISoundCloudClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.soundcloud.com/";
 
@@ -39,7 +39,7 @@ namespace SoundCloud
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::SoundCloud.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

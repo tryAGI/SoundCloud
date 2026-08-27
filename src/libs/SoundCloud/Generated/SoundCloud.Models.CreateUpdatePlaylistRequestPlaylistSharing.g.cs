@@ -9,11 +9,11 @@ namespace SoundCloud
     public enum CreateUpdatePlaylistRequestPlaylistSharing
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }
