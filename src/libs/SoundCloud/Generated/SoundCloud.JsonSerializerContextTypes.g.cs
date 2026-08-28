@@ -220,7 +220,7 @@ namespace SoundCloud
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.User>? Type48 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.User?>? Type48 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -521,7 +521,7 @@ namespace SoundCloud
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::SoundCloud.User>? ListType3 { get; set; }
+        public global::System.Collections.Generic.List<global::SoundCloud.User?>? ListType3 { get; set; }
         /// <summary>
         ///
         /// </summary>
