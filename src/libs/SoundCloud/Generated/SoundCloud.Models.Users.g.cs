@@ -12,7 +12,7 @@ namespace SoundCloud
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collection")]
-        public global::System.Collections.Generic.IList<global::SoundCloud.User>? Collection { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.User?>? Collection { get; set; }
 
         /// <summary>
         ///
@@ -35,7 +35,7 @@ namespace SoundCloud
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Users(
-            global::System.Collections.Generic.IList<global::SoundCloud.User>? collection,
+            global::System.Collections.Generic.IList<global::SoundCloud.User?>? collection,
             string? nextHref)
         {
             this.Collection = collection;
