@@ -4,12 +4,11 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// Swagger json can be found [here](https://developers.soundcloud.com/docs/api/explorer/api.json)<br/>
-    /// &lt;a href="#" id="cookie-manager"&gt;Cookie manager&lt;/a&gt;<br/>
+    /// Authentication and Authorization Endpoints.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class SoundCloudClient : global::SoundCloud.ISoundCloudClient, global::System.IDisposable
+    public sealed partial class OauthClient : global::SoundCloud.IOauthClient, global::System.IDisposable
     {
         /// <summary>
         ///
@@ -36,7 +35,7 @@ namespace SoundCloud
         /// <inheritdoc/>
         public global::SoundCloud.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::SoundCloud.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::SoundCloud.OauthSourceGenerationContext.Default);
 
         /// <summary>
         ///
@@ -49,97 +48,7 @@ namespace SoundCloud
 
 
         /// <summary>
-        /// Liking Tracks &amp; Playlists.
-        /// </summary>
-        public LikesClient Likes => new LikesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Own User Endpoints. Requires an access token obtained via the authorization_code flow (resource owner required).
-        /// </summary>
-        public MeClient Me => new MeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Miscellaneous Endpoints.
-        /// </summary>
-        public MiscellaneousClient Miscellaneous => new MiscellaneousClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Authentication and Authorization Endpoints.
-        /// </summary>
-        public OauthClient Oauth => new OauthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Playlists Endpoints.
-        /// </summary>
-        public PlaylistsClient Playlists => new PlaylistsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Reposting Tracks &amp; Playlists.
-        /// </summary>
-        public RepostsClient Reposts => new RepostsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Search Endpoints. Supports access tokens from both authorization_code and client_credentials flows.
-        /// </summary>
-        public SearchClient Search => new SearchClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// System Playlists Endpoints (e.g. track stations, artist stations).
-        /// </summary>
-        public SystemPlaylistsClient SystemPlaylists => new SystemPlaylistsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Tracks Endpoints.
-        /// </summary>
-        public TracksClient Tracks => new TracksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// SoundCloud Users Endpoints.
-        /// </summary>
-        public UsersClient Users => new UsersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        /// Creates a new instance of the SoundCloudClient.
+        /// Creates a new instance of the OauthClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -147,7 +56,7 @@ namespace SoundCloud
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SoundCloudClient(
+        public OauthClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::SoundCloud.EndPointAuthorization>? authorizations = null,
@@ -161,14 +70,14 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// Creates a new instance of the SoundCloudClient with explicit options but no base URL override.
+        /// Creates a new instance of the OauthClient with explicit options but no base URL override.
         /// Skips passing <c>baseUri</c> so the default base URL from the OpenAPI spec applies.
         /// </summary>
         /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SoundCloudClient(
+        public OauthClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Collections.Generic.List<global::SoundCloud.EndPointAuthorization>? authorizations,
             global::SoundCloud.AutoSDKClientOptions? options,
@@ -182,7 +91,7 @@ namespace SoundCloud
         }
 
         /// <summary>
-        /// Creates a new instance of the SoundCloudClient.
+        /// Creates a new instance of the OauthClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -191,7 +100,7 @@ namespace SoundCloud
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public SoundCloudClient(
+        public OauthClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Uri? baseUri,
             global::System.Collections.Generic.List<global::SoundCloud.EndPointAuthorization>? authorizations,

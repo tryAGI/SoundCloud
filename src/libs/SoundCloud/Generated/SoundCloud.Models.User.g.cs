@@ -161,6 +161,12 @@ namespace SoundCloud
         public string? WebsiteTitle { get; set; }
 
         /// <summary>
+        /// URN of the user's artist station system playlist, when available. Uses the `system-playlists` collection (e.g. `soundcloud:system-playlists:artist-stations:{id}`). Omitted or null when the user has no public tracks or no station.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("station_urn")]
+        public string? StationUrn { get; set; }
+
+        /// <summary>
         /// a list subscriptions associated with the user
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subscriptions")]
@@ -251,6 +257,9 @@ namespace SoundCloud
         /// <param name="websiteTitle">
         /// a custom title for the website
         /// </param>
+        /// <param name="stationUrn">
+        /// URN of the user's artist station system playlist, when available. Uses the `system-playlists` collection (e.g. `soundcloud:system-playlists:artist-stations:{id}`). Omitted or null when the user has no public tracks or no station.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -279,7 +288,8 @@ namespace SoundCloud
             string? uri,
             string? username,
             string? website,
-            string? websiteTitle)
+            string? websiteTitle,
+            string? stationUrn)
         {
             this.AvatarUrl = avatarUrl;
             this.City = city;
@@ -306,6 +316,7 @@ namespace SoundCloud
             this.Username = username;
             this.Website = website;
             this.WebsiteTitle = websiteTitle;
+            this.StationUrn = stationUrn;
         }
 
         /// <summary>

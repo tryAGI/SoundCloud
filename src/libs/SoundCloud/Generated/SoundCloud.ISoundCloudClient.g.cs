@@ -62,6 +62,11 @@ namespace SoundCloud
         public MiscellaneousClient Miscellaneous { get; }
 
         /// <summary>
+        /// Authentication and Authorization Endpoints.
+        /// </summary>
+        public OauthClient Oauth { get; }
+
+        /// <summary>
         /// Playlists Endpoints.
         /// </summary>
         public PlaylistsClient Playlists { get; }
@@ -75,6 +80,11 @@ namespace SoundCloud
         /// Search Endpoints. Supports access tokens from both authorization_code and client_credentials flows.
         /// </summary>
         public SearchClient Search { get; }
+
+        /// <summary>
+        /// System Playlists Endpoints (e.g. track stations, artist stations).
+        /// </summary>
+        public SystemPlaylistsClient SystemPlaylists { get; }
 
         /// <summary>
         /// Tracks Endpoints.
