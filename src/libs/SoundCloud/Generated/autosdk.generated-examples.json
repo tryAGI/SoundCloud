@@ -222,6 +222,17 @@
     },
     {
       "Order": 21,
+      "Title": "Revokes OAuth access for the calling application.",
+      "Slug": "revokes-oauth-access-for-the-calling-application",
+      "Description": "Invalidates access tokens for the client application that issued the current access token.\nReturns 400 if disconnect is not supported for the current token.",
+      "Language": "csharp",
+      "Code": "using var client = new SoundCloudClient(apiKey);\nawait client.Oauth.RevokesOAuthAccessForTheCallingApplicationAsync();",
+      "Format": "sdk",
+      "OperationId": "RevokesOAuthAccessForTheCallingApplication",
+      "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 22,
       "Title": "Creates a playlist.",
       "Slug": "creates-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -232,7 +243,7 @@
       "Setup": null
     },
     {
-      "Order": 22,
+      "Order": 23,
       "Title": "Deletes a playlist.",
       "Slug": "deletes-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -243,7 +254,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 23,
+      "Order": 24,
       "Title": "Returns a collection of playlist\u0027s reposters.",
       "Slug": "returns-a-collection-of-playlist-s-reposters",
       "Description": "Generated from OpenAPI examples.",
@@ -254,7 +265,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 24,
+      "Order": 25,
       "Title": "Returns a playlist.",
       "Slug": "returns-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -265,7 +276,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 25,
+      "Order": 26,
       "Title": "Returns tracks under a playlist.",
       "Slug": "returns-tracks-under-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -276,7 +287,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 26,
+      "Order": 27,
       "Title": "Updates a playlist.",
       "Slug": "updates-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -287,7 +298,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 27,
+      "Order": 28,
       "Title": "Removes a repost on a playlist as the authenticated user",
       "Slug": "removes-a-repost-on-a-playlist-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -298,7 +309,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 28,
+      "Order": 29,
       "Title": "Reposts a playlist as the authenticated user",
       "Slug": "reposts-a-playlist-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -309,7 +320,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 29,
+      "Order": 30,
       "Title": "Reposts a track as the authenticated user",
       "Slug": "reposts-a-track-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -320,7 +331,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 30,
+      "Order": 31,
       "Title": "Performs a playlist search based on a query",
       "Slug": "performs-a-playlist-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -331,7 +342,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 31,
+      "Order": 32,
       "Title": "Performs a track search based on a query",
       "Slug": "performs-a-track-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -342,7 +353,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 32,
+      "Order": 33,
       "Title": "Performs a user search based on a query",
       "Slug": "performs-a-user-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -353,7 +364,18 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 33,
+      "Order": 34,
+      "Title": "Returns a system playlist.",
+      "Slug": "returns-a-system-playlist",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "csharp",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.SystemPlaylists.ReturnsASystemPlaylistAsync(\n    id: \u0022soundcloud:system-playlists:track-stations:2287580618\u0022\n);\n\n// Example response:\n// {\n//   \u0022kind\u0022: \u0022system-playlist\u0022,\n//   \u0022urn\u0022: \u0022soundcloud:system-playlists:track-stations:2287580618\u0022,\n//   \u0022title\u0022: \u0022Track station\u0022,\n//   \u0022description\u0022: \u0022Related tracks\u0022,\n//   \u0022playlist_type\u0022: \u0022PLAYLIST\u0022,\n//   \u0022permalink\u0022: \u0022track-stations:2287580618\u0022,\n//   \u0022permalink_url\u0022: \u0022https://soundcloud.com/discover/sets/track-stations:2287580618\u0022,\n//   \u0022last_updated\u0022: \u00222017-06-29T20:54:22.000Z\u0022,\n//   \u0022tracking_feature_name\u0022: \u0022track-stations\u0022,\n//   \u0022track_count\u0022: 1,\n//   \u0022query_urn\u0022: \u0022soundcloud:queries:abc\u0022,\n//   \u0022tracks\u0022: [\n//     {\n//       \u0022$ref\u0022: \u0022#/components/examples/Track/value\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "ReturnsASystemPlaylist",
+      "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 35,
       "Title": "Creates or updates the storefront (Artist Storefront) of a track.",
       "Slug": "creates-or-updates-the-storefront-artist-storefront-of-a-track",
       "Description": "Creates or updates the storefront module shown on the track page. The request replaces\nthe whole storefront: optional fields (link_title, description, price) are cleared when\nomitted, so always send every value the storefront should keep. The request fails with\n403 when the authenticated user does not own the track, and also when the user does not\nhold a creator subscription that includes external purchase options. The storefront\nlinks to an external page \u2014 no payment is processed by SoundCloud.",
@@ -364,7 +386,7 @@
       "Setup": null
     },
     {
-      "Order": 34,
+      "Order": 36,
       "Title": "Deletes a track.",
       "Slug": "deletes-a-track",
       "Description": "Generated from OpenAPI examples.",
@@ -375,7 +397,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 35,
+      "Order": 37,
       "Title": "Returns a collection of track\u0027s reposters.",
       "Slug": "returns-a-collection-of-track-s-reposters",
       "Description": "Generated from OpenAPI examples.",
@@ -386,7 +408,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 36,
+      "Order": 38,
       "Title": "Returns a list of users who have favorited or liked the track.",
       "Slug": "returns-a-list-of-users-who-have-favorited-or-liked-the-track",
       "Description": "Generated from OpenAPI examples.",
@@ -397,18 +419,18 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 37,
+      "Order": 39,
       "Title": "Returns a track.",
       "Slug": "returns-a-track",
       "Description": "Generated from OpenAPI examples.",
       "Language": "csharp",
-      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Tracks.ReturnsATrackAsync(\n    trackUrn: \u0022soundcloud:tracks:308946187\u0022\n);\n\n// Example response:\n// {\n//   \u0022kind\u0022: \u0022track\u0022,\n//   \u0022artwork_url\u0022: \u0022https://i1.sndcdn.com/artworks-large.jpg\u0022,\n//   \u0022available_country_codes\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022bpm\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022comment_count\u0022: 4,\n//   \u0022commentable\u0022: true,\n//   \u0022created_at\u0022: \u00222019/01/15 15:40:49 \\u002B0000\u0022,\n//   \u0022description\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022download_count\u0022: 0,\n//   \u0022download_url\u0022: \u0022https://api.soundcloud.com/tracks/1234/download\u0022,\n//   \u0022downloadable\u0022: false,\n//   \u0022duration\u0022: 40000,\n//   \u0022embeddable_by\u0022: \u0022all\u0022,\n//   \u0022favoritings_count\u0022: 271,\n//   \u0022genre\u0022: \u0022Rock\u0022,\n//   \u0022urn\u0022: \u0022soundcloud:tracks:1234\u0022,\n//   \u0022isrc\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022key_signature\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022label_name\u0022: \u0022some label\u0022,\n//   \u0022license\u0022: \u0022all-rights-reserved\u0022,\n//   \u0022metadata_artist\u0022: \u0022Metro Boomin, The Weeknd, 21 Savage\u0022,\n//   \u0022permalink_url\u0022: \u0022https://soundcloud.com/userPermalink/trackPermalink\u0022,\n//   \u0022playback_count\u0022: 8027,\n//   \u0022purchase_title\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022purchase_url\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022release\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022release_day\u0022: 22,\n//   \u0022release_month\u0022: 8,\n//   \u0022release_year\u0022: 2019,\n//   \u0022reposts_count\u0022: 18,\n//   \u0022secret_uri\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022sharing\u0022: \u0022public\u0022,\n//   \u0022stream_url\u0022: \u0022https://api.soundcloud.com/tracks/1234/stream\u0022,\n//   \u0022streamable\u0022: true,\n//   \u0022tag_list\u0022: \u0022\u0022,\n//   \u0022title\u0022: \u0022Some title\u0022,\n//   \u0022uri\u0022: \u0022https://api.soundcloud.com/tracks/1234\u0022,\n//   \u0022user\u0022: {\n//     \u0022$ref\u0022: \u0022#/components/examples/User/value\u0022\n//   },\n//   \u0022user_favorite\u0022: true,\n//   \u0022user_playback_count\u0022: 1,\n//   \u0022waveform_url\u0022: \u0022https://wave.sndcdn.com/someString.png\u0022,\n//   \u0022access\u0022: \u0022playable\u0022,\n//   \u0022reveal_stats\u0022: true,\n//   \u0022reveal_comments\u0022: true\n// }",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Tracks.ReturnsATrackAsync(\n    trackUrn: \u0022soundcloud:tracks:308946187\u0022\n);\n\n// Example response:\n// {\n//   \u0022kind\u0022: \u0022track\u0022,\n//   \u0022artwork_url\u0022: \u0022https://i1.sndcdn.com/artworks-large.jpg\u0022,\n//   \u0022available_country_codes\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022bpm\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022comment_count\u0022: 4,\n//   \u0022commentable\u0022: true,\n//   \u0022created_at\u0022: \u00222019/01/15 15:40:49 \\u002B0000\u0022,\n//   \u0022description\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022download_count\u0022: 0,\n//   \u0022download_url\u0022: \u0022https://api.soundcloud.com/tracks/1234/download\u0022,\n//   \u0022downloadable\u0022: false,\n//   \u0022duration\u0022: 40000,\n//   \u0022embeddable_by\u0022: \u0022all\u0022,\n//   \u0022favoritings_count\u0022: 271,\n//   \u0022genre\u0022: \u0022Rock\u0022,\n//   \u0022urn\u0022: \u0022soundcloud:tracks:1234\u0022,\n//   \u0022isrc\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022key_signature\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022label_name\u0022: \u0022some label\u0022,\n//   \u0022license\u0022: \u0022all-rights-reserved\u0022,\n//   \u0022metadata_artist\u0022: \u0022Metro Boomin, The Weeknd, 21 Savage\u0022,\n//   \u0022permalink_url\u0022: \u0022https://soundcloud.com/userPermalink/trackPermalink\u0022,\n//   \u0022playback_count\u0022: 8027,\n//   \u0022purchase_title\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022purchase_url\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022release\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022release_day\u0022: 22,\n//   \u0022release_month\u0022: 8,\n//   \u0022release_year\u0022: 2019,\n//   \u0022reposts_count\u0022: 18,\n//   \u0022secret_uri\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022sharing\u0022: \u0022public\u0022,\n//   \u0022stream_url\u0022: \u0022https://api.soundcloud.com/tracks/1234/stream\u0022,\n//   \u0022streamable\u0022: true,\n//   \u0022tag_list\u0022: \u0022\u0022,\n//   \u0022title\u0022: \u0022Some title\u0022,\n//   \u0022uri\u0022: \u0022https://api.soundcloud.com/tracks/1234\u0022,\n//   \u0022user\u0022: {\n//     \u0022$ref\u0022: \u0022#/components/examples/User/value\u0022\n//   },\n//   \u0022user_favorite\u0022: true,\n//   \u0022user_playback_count\u0022: 1,\n//   \u0022waveform_url\u0022: \u0022https://wave.sndcdn.com/someString.png\u0022,\n//   \u0022access\u0022: \u0022playable\u0022,\n//   \u0022reveal_stats\u0022: true,\n//   \u0022reveal_comments\u0022: true,\n//   \u0022station_urn\u0022: \u0022soundcloud:system-playlists:track-stations:1234\u0022\n// }",
       "Format": "sdk",
       "OperationId": "ReturnsATrack",
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 38,
+      "Order": 40,
       "Title": "Returns a track\u0027s streamable URLs (needs to keep using authentication)",
       "Slug": "returns-a-track-s-streamable-urls-needs-to-keep-using-authentication",
       "Description": "Generated from OpenAPI examples.",
@@ -419,7 +441,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 39,
+      "Order": 41,
       "Title": "Returns all related tracks of track on SoundCloud.",
       "Slug": "returns-all-related-tracks-of-track-on-soundcloud",
       "Description": "Generated from OpenAPI examples.",
@@ -430,7 +452,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 40,
+      "Order": 42,
       "Title": "Returns the comments posted on the track(track_urn).",
       "Slug": "returns-the-comments-posted-on-the-track-track-urn",
       "Description": "Generated from OpenAPI examples.",
@@ -441,7 +463,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 41,
+      "Order": 43,
       "Title": "Returns the newly created comment on success",
       "Slug": "returns-the-newly-created-comment-on-success",
       "Description": "Generated from OpenAPI examples.",
@@ -452,7 +474,7 @@
       "Setup": null
     },
     {
-      "Order": 42,
+      "Order": 44,
       "Title": "Starts playback of a preview of the track",
       "Slug": "starts-playback-of-a-preview-of-the-track",
       "Description": "Generated from OpenAPI examples.",
@@ -463,7 +485,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 43,
+      "Order": 45,
       "Title": "Updates a track\u0027s information.",
       "Slug": "updates-a-track-s-information",
       "Description": "Generated from OpenAPI examples.",
@@ -474,7 +496,7 @@
       "Setup": null
     },
     {
-      "Order": 44,
+      "Order": 46,
       "Title": "Uploads a new track.",
       "Slug": "uploads-a-new-track",
       "Description": "Generated from OpenAPI examples.",
@@ -485,7 +507,7 @@
       "Setup": null
     },
     {
-      "Order": 45,
+      "Order": 47,
       "Title": "Returns a list of user\u2019s followers.",
       "Slug": "returns-a-list-of-user-s-followers",
       "Description": "Returns a list of users that follows (user_urn).",
@@ -496,7 +518,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 46,
+      "Order": 48,
       "Title": "Returns a list of user\u2019s followings.",
       "Slug": "returns-a-list-of-user-s-followings",
       "Description": "Returns list of users that (user_urn) follows.",
@@ -507,7 +529,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 47,
+      "Order": 49,
       "Title": "Returns a list of user\u0027s liked playlists.",
       "Slug": "returns-a-list-of-user-s-liked-playlists",
       "Description": "Generated from OpenAPI examples.",
@@ -518,7 +540,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 48,
+      "Order": 50,
       "Title": "Returns a list of user\u0027s liked tracks.",
       "Slug": "returns-a-list-of-user-s-liked-tracks",
       "Description": "Generated from OpenAPI examples.",
@@ -529,7 +551,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 49,
+      "Order": 51,
       "Title": "Returns a list of user\u0027s playlist reposts.",
       "Slug": "returns-a-list-of-user-s-playlist-reposts",
       "Description": "Generated from OpenAPI examples.",
@@ -540,7 +562,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 50,
+      "Order": 52,
       "Title": "Returns a list of user\u0027s playlists.",
       "Slug": "returns-a-list-of-user-s-playlists",
       "Description": "Generated from OpenAPI examples.",
@@ -551,7 +573,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 51,
+      "Order": 53,
       "Title": "Returns a list of user\u0027s track reposts.",
       "Slug": "returns-a-list-of-user-s-track-reposts",
       "Description": "Generated from OpenAPI examples.",
@@ -562,7 +584,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 52,
+      "Order": 54,
       "Title": "Returns a list of user\u0027s tracks.",
       "Slug": "returns-a-list-of-user-s-tracks",
       "Description": "Generated from OpenAPI examples.",
@@ -573,18 +595,18 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 53,
+      "Order": 55,
       "Title": "Returns a user.",
       "Slug": "returns-a-user",
       "Description": "Generated from OpenAPI examples.",
       "Language": "csharp",
-      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Users.ReturnsAUserAsync(\n    userUrn: \u0022soundcloud:users:948745750\u0022\n);\n\n// Example response:\n// {\n//   \u0022avatar_url\u0022: \u0022https://i1.sndcdn.com/avatars.jpg\u0022,\n//   \u0022city\u0022: \u0022City\u0022,\n//   \u0022country\u0022: \u0022Country\u0022,\n//   \u0022created_at\u0022: \u00222018/01/01 12:08:25 \\u002B0000\u0022,\n//   \u0022description\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022discogs_name\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022first_name\u0022: \u0022First_name\u0022,\n//   \u0022followers_count\u0022: 0,\n//   \u0022followings_count\u0022: 0,\n//   \u0022full_name\u0022: \u0022Full Name\u0022,\n//   \u0022urn\u0022: \u0022soundcloud:users:12345\u0022,\n//   \u0022kind\u0022: \u0022user\u0022,\n//   \u0022last_modified\u0022: \u00222020/01/03 12:08:25 \\u002B0000\u0022,\n//   \u0022last_name\u0022: \u0022Last_name\u0022,\n//   \u0022myspace_name\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022permalink\u0022: \u0022permalink\u0022,\n//   \u0022permalink_url\u0022: \u0022https://soundcloud.com/permalink\u0022,\n//   \u0022plan\u0022: \u0022Free\u0022,\n//   \u0022playlist_count\u0022: 3,\n//   \u0022public_favorites_count\u0022: 20,\n//   \u0022reposts_count\u0022: 0,\n//   \u0022subscriptions\u0022: [\n//     {\n//       \u0022product\u0022: {\n//         \u0022id\u0022: \u0022some-id\u0022,\n//         \u0022name\u0022: \u0022some.name\u0022\n//       }\n//     }\n//   ],\n//   \u0022track_count\u0022: 0,\n//   \u0022upload_seconds_left\u0022: 10800,\n//   \u0022uri\u0022: \u0022https://api.soundcloud.com/users/1234\u0022,\n//   \u0022username\u0022: \u0022some.user\u0022,\n//   \u0022website\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022website_title\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022\n// }",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Users.ReturnsAUserAsync(\n    userUrn: \u0022soundcloud:users:948745750\u0022\n);\n\n// Example response:\n// {\n//   \u0022avatar_url\u0022: \u0022https://i1.sndcdn.com/avatars.jpg\u0022,\n//   \u0022city\u0022: \u0022City\u0022,\n//   \u0022country\u0022: \u0022Country\u0022,\n//   \u0022created_at\u0022: \u00222018/01/01 12:08:25 \\u002B0000\u0022,\n//   \u0022description\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022discogs_name\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022first_name\u0022: \u0022First_name\u0022,\n//   \u0022followers_count\u0022: 0,\n//   \u0022followings_count\u0022: 0,\n//   \u0022full_name\u0022: \u0022Full Name\u0022,\n//   \u0022urn\u0022: \u0022soundcloud:users:12345\u0022,\n//   \u0022kind\u0022: \u0022user\u0022,\n//   \u0022last_modified\u0022: \u00222020/01/03 12:08:25 \\u002B0000\u0022,\n//   \u0022last_name\u0022: \u0022Last_name\u0022,\n//   \u0022myspace_name\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022permalink\u0022: \u0022permalink\u0022,\n//   \u0022permalink_url\u0022: \u0022https://soundcloud.com/permalink\u0022,\n//   \u0022plan\u0022: \u0022Free\u0022,\n//   \u0022playlist_count\u0022: 3,\n//   \u0022public_favorites_count\u0022: 20,\n//   \u0022reposts_count\u0022: 0,\n//   \u0022station_urn\u0022: \u0022soundcloud:system-playlists:artist-stations:12345\u0022,\n//   \u0022subscriptions\u0022: [\n//     {\n//       \u0022product\u0022: {\n//         \u0022id\u0022: \u0022some-id\u0022,\n//         \u0022name\u0022: \u0022some.name\u0022\n//       }\n//     }\n//   ],\n//   \u0022track_count\u0022: 0,\n//   \u0022upload_seconds_left\u0022: 10800,\n//   \u0022uri\u0022: \u0022https://api.soundcloud.com/users/1234\u0022,\n//   \u0022username\u0022: \u0022some.user\u0022,\n//   \u0022website\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022,\n//   \u0022website_title\u0022: \u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022\n// }",
       "Format": "sdk",
       "OperationId": "ReturnsAUser",
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 54,
+      "Order": 56,
       "Title": "Returns list of user\u0027s links added to their profile (website, facebook, instagram).",
       "Slug": "returns-list-of-user-s-links-added-to-their-profile-website-facebook-instagram",
       "Description": "Generated from OpenAPI examples.",
@@ -595,7 +617,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 55,
+      "Order": 57,
       "Title": "Returns related artist recommendations for a user on SoundCloud.",
       "Slug": "returns-related-artist-recommendations-for-a-user-on-soundcloud",
       "Description": "Generated from OpenAPI examples.",

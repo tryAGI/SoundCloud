@@ -141,6 +141,10 @@ namespace SoundCloud
 
             typeof(global::SoundCloud.JsonConverters.GetTracksRelatedAccesNullableJsonConverter),
 
+            typeof(global::SoundCloud.JsonConverters.GetSystemPlaylistsAccesJsonConverter),
+
+            typeof(global::SoundCloud.JsonConverters.GetSystemPlaylistsAccesNullableJsonConverter),
+
             typeof(global::SoundCloud.JsonConverters.GetUsersPlaylistsAccesJsonConverter),
 
             typeof(global::SoundCloud.JsonConverters.GetUsersPlaylistsAccesNullableJsonConverter),
@@ -276,6 +280,7 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.Track>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Playlist), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.AllOf<object, global::SoundCloud.User>), TypeInfoPropertyName = "AllOfObjectUser2", GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.SystemPlaylist), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Playlists), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.Playlist>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Activities), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
@@ -326,6 +331,8 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.GetPlaylistsTracksAcces), TypeInfoPropertyName = "GetPlaylistsTracksAcces2", GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.GetTracksRelatedAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.GetTracksRelatedAcces), TypeInfoPropertyName = "GetTracksRelatedAcces2", GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.GetSystemPlaylistsAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.GetSystemPlaylistsAcces), TypeInfoPropertyName = "GetSystemPlaylistsAcces2", GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.GetUsersPlaylistsAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.GetUsersPlaylistsAcces), TypeInfoPropertyName = "GetUsersPlaylistsAcces2", GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.GetUsersTracksAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
@@ -360,6 +367,7 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetPlaylistsAcces2>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetPlaylistsTracksAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetTracksRelatedAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetSystemPlaylistsAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetUsersPlaylistsAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetUsersTracksAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetUsersLikesTracksAcces>), GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata)]

@@ -276,6 +276,12 @@ namespace SoundCloud
         public bool? RevealComments { get; set; }
 
         /// <summary>
+        /// URN of the track's station system playlist, when available. Uses the `system-playlists` collection (e.g. `soundcloud:system-playlists:track-stations:{id}`). Omitted or null for non-public tracks and tracks without a station.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("station_urn")]
+        public string? StationUrn { get; set; }
+
+        /// <summary>
         /// Secret URL.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_uri")]
@@ -414,6 +420,9 @@ namespace SoundCloud
         /// <param name="revealComments">
         /// Whether comments are visible. When false (quiet mode), comments are hidden.
         /// </param>
+        /// <param name="stationUrn">
+        /// URN of the track's station system playlist, when available. Uses the `system-playlists` collection (e.g. `soundcloud:system-playlists:track-stations:{id}`). Omitted or null for non-public tracks and tracks without a station.
+        /// </param>
         /// <param name="secretUri">
         /// Secret URL.
         /// </param>
@@ -462,6 +471,7 @@ namespace SoundCloud
             int? repostsCount,
             bool? revealStats,
             bool? revealComments,
+            string? stationUrn,
             string? secretUri)
         {
             this.Kind = kind;
@@ -505,6 +515,7 @@ namespace SoundCloud
             this.RepostsCount = repostsCount;
             this.RevealStats = revealStats;
             this.RevealComments = revealComments;
+            this.StationUrn = stationUrn;
             this.SecretUri = secretUri;
         }
 
