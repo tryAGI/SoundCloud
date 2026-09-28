@@ -42,8 +42,8 @@ namespace SoundCloud
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Error PickError() => IsError
-            ? Error!
+        public global::SoundCloud.Error PickError() => Error is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace SoundCloud
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.TooManyRequestsVariant2 PickTooManyRequestsVariant2() => IsTooManyRequestsVariant2
-            ? TooManyRequestsVariant2!
+        public global::SoundCloud.TooManyRequestsVariant2 PickTooManyRequestsVariant2() => TooManyRequestsVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TooManyRequestsVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace SoundCloud
                 Validate();
             }
 
-            if (IsError && error != null)
+            if (Error is { } __value0 && error != null)
             {
-                return error(Error!);
+                return error(__value0);
             }
-            else if (IsTooManyRequestsVariant2 && tooManyRequestsVariant2 != null)
+            else if (TooManyRequestsVariant2 is { } __value1 && tooManyRequestsVariant2 != null)
             {
-                return tooManyRequestsVariant2(TooManyRequestsVariant2!);
+                return tooManyRequestsVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace SoundCloud
                 Validate();
             }
 
-            if (IsError)
+            if (Error is { } __value0)
             {
-                error?.Invoke(Error!);
+                error?.Invoke(__value0);
             }
-            else if (IsTooManyRequestsVariant2)
+            else if (TooManyRequestsVariant2 is { } __value1)
             {
-                tooManyRequestsVariant2?.Invoke(TooManyRequestsVariant2!);
+                tooManyRequestsVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace SoundCloud
                 Validate();
             }
 
-            if (IsError)
+            if (Error is { } __value0)
             {
-                error?.Invoke(Error!);
+                error?.Invoke(__value0);
             }
-            else if (IsTooManyRequestsVariant2)
+            else if (TooManyRequestsVariant2 is { } __value1)
             {
-                tooManyRequestsVariant2?.Invoke(TooManyRequestsVariant2!);
+                tooManyRequestsVariant2?.Invoke(__value1);
             }
         }
 

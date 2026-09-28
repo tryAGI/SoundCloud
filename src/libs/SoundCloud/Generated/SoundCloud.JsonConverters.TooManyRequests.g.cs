@@ -70,7 +70,7 @@ namespace SoundCloud.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SoundCloud.Error), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SoundCloud.Error?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SoundCloud.Error).Name}");
-                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.Error!, typeInfo);
+                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickError(), typeInfo);
                 if (__element0.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");
@@ -88,7 +88,7 @@ namespace SoundCloud.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SoundCloud.TooManyRequestsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SoundCloud.TooManyRequestsVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SoundCloud.TooManyRequestsVariant2).Name}");
-                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.TooManyRequestsVariant2!, typeInfo);
+                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickTooManyRequestsVariant2(), typeInfo);
                 if (__element1.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");
