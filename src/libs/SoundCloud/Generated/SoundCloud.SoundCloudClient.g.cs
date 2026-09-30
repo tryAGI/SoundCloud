@@ -49,7 +49,7 @@ namespace SoundCloud
 
 
         /// <summary>
-        /// Liking Tracks &amp; Playlists.
+        /// Liking Tracks, Playlists &amp; System Playlists (stations).
         /// </summary>
         public LikesClient Likes => new LikesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

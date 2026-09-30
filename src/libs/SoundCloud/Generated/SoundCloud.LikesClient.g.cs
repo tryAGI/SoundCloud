@@ -4,7 +4,7 @@
 namespace SoundCloud
 {
     /// <summary>
-    /// Liking Tracks &amp; Playlists.<br/>
+    /// Liking Tracks, Playlists &amp; System Playlists (stations).<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

@@ -1,13 +1,15 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace SoundCloud
 {
-    public partial class LikesClient
+    public partial class MeClient
     {
 
 
-        private static readonly global::SoundCloud.EndPointSecurityRequirement s_LikesAPlaylistSecurityRequirement0 =
+        private static readonly global::SoundCloud.EndPointSecurityRequirement s_ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserSecurityRequirement0 =
             new global::SoundCloud.EndPointSecurityRequirement
             {
                 Authorizations = new global::SoundCloud.EndPointAuthorizationRequirement[]
@@ -21,62 +23,81 @@ namespace SoundCloud
                     },
                 },
             };
-        private static readonly global::SoundCloud.EndPointSecurityRequirement[] s_LikesAPlaylistSecurityRequirements =
+        private static readonly global::SoundCloud.EndPointSecurityRequirement[] s_ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserSecurityRequirements =
             new global::SoundCloud.EndPointSecurityRequirement[]
-            {                s_LikesAPlaylistSecurityRequirement0,
+            {                s_ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserSecurityRequirement0,
             };
-        partial void PrepareLikesAPlaylistArguments(
+        partial void PrepareReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string playlistUrn);
-        partial void PrepareLikesAPlaylistRequest(
+            ref int? limit,
+            ref bool? linkedPartitioning);
+        partial void PrepareReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string playlistUrn);
-        partial void ProcessLikesAPlaylistResponse(
+            int? limit,
+            bool? linkedPartitioning);
+        partial void ProcessReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
-        /// Likes a playlist.
+        /// Returns a list of liked system playlists (stations) of the authenticated user.
         /// </summary>
-        /// <param name="playlistUrn"></param>
+        /// <param name="limit">
+        /// Default Value: 50
+        /// </param>
+        /// <param name="linkedPartitioning"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SoundCloud.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task LikesAPlaylistAsync(
-            string playlistUrn,
+        public async global::System.Threading.Tasks.Task<global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>> ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync(
+            int? limit = default,
+            bool? linkedPartitioning = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await LikesAPlaylistAsResponseAsync(
-                playlistUrn: playlistUrn,
+            var __response = await ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsResponseAsync(
+                limit: limit,
+                linkedPartitioning: linkedPartitioning,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
+
+            return __response.Body;
         }
         /// <summary>
-        /// Likes a playlist.
+        /// Returns a list of liked system playlists (stations) of the authenticated user.
         /// </summary>
-        /// <param name="playlistUrn"></param>
+        /// <param name="limit">
+        /// Default Value: 50
+        /// </param>
+        /// <param name="linkedPartitioning"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SoundCloud.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse> LikesAPlaylistAsResponseAsync(
-            string playlistUrn,
+        public async global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>>> ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsResponseAsync(
+            int? limit = default,
+            bool? linkedPartitioning = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareLikesAPlaylistArguments(
+            PrepareReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserArguments(
                 httpClient: HttpClient,
-                playlistUrn: ref playlistUrn);
+                limit: ref limit,
+                linkedPartitioning: ref linkedPartitioning);
 
 
             var __authorizations = global::SoundCloud.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_LikesAPlaylistSecurityRequirements,
-                operationName: "LikesAPlaylistAsync");
+                securityRequirements: s_ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserSecurityRequirements,
+                operationName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync");
 
             using var __timeoutCancellationTokenSource = global::SoundCloud.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -96,15 +117,19 @@ namespace SoundCloud
             {
 
                             var __pathBuilder = new global::SoundCloud.PathBuilder(
-                                path: $"/likes/playlists/{playlistUrn}",
+                                path: "/me/likes/system-playlists",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("linked_partitioning", linkedPartitioning?.ToString().ToLowerInvariant())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::SoundCloud.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -135,10 +160,11 @@ namespace SoundCloud
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareLikesAPlaylistRequest(
+                PrepareReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    playlistUrn: playlistUrn);
+                    limit: limit,
+                    linkedPartitioning: linkedPartitioning);
 
                 return __httpRequest;
             }
@@ -155,10 +181,10 @@ namespace SoundCloud
                     await global::SoundCloud.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::SoundCloud.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LikesAPlaylist",
-                                methodName: "LikesAPlaylistAsync",
-                                pathTemplate: "$\"/likes/playlists/{playlistUrn}\"",
-                                httpMethod: "POST",
+                                operationId: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+                                methodName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync",
+                                pathTemplate: "\"/me/likes/system-playlists\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -189,10 +215,10 @@ namespace SoundCloud
                         await global::SoundCloud.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::SoundCloud.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LikesAPlaylist",
-                                methodName: "LikesAPlaylistAsync",
-                                pathTemplate: "$\"/likes/playlists/{playlistUrn}\"",
-                                httpMethod: "POST",
+                                operationId: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+                                methodName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync",
+                                pathTemplate: "\"/me/likes/system-playlists\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -230,10 +256,10 @@ namespace SoundCloud
                         await global::SoundCloud.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::SoundCloud.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LikesAPlaylist",
-                                methodName: "LikesAPlaylistAsync",
-                                pathTemplate: "$\"/likes/playlists/{playlistUrn}\"",
-                                httpMethod: "POST",
+                                operationId: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+                                methodName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync",
+                                pathTemplate: "\"/me/likes/system-playlists\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -270,7 +296,7 @@ namespace SoundCloud
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessLikesAPlaylistResponse(
+                ProcessReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -278,10 +304,10 @@ namespace SoundCloud
                     await global::SoundCloud.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::SoundCloud.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LikesAPlaylist",
-                                methodName: "LikesAPlaylistAsync",
-                                pathTemplate: "$\"/likes/playlists/{playlistUrn}\"",
-                                httpMethod: "POST",
+                                operationId: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+                                methodName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync",
+                                pathTemplate: "\"/me/likes/system-playlists\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -300,10 +326,10 @@ namespace SoundCloud
                     await global::SoundCloud.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::SoundCloud.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LikesAPlaylist",
-                                methodName: "LikesAPlaylistAsync",
-                                pathTemplate: "$\"/likes/playlists/{playlistUrn}\"",
-                                httpMethod: "POST",
+                                operationId: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+                                methodName: "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync",
+                                pathTemplate: "\"/me/likes/system-playlists\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -317,43 +343,6 @@ namespace SoundCloud
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad Request
-                            if ((int)__response.StatusCode == 400)
-                            {
-                                string? __content_400 = null;
-                                global::System.Exception? __exception_400 = null;
-                                global::SoundCloud.Error? __value_400 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::SoundCloud.Error.FromJson(__content_400, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_400 = global::SoundCloud.Error.FromJson(__content_400, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_400 = __ex;
-                                }
-
-
-                                throw global::SoundCloud.ApiException<global::SoundCloud.Error>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_400,
-                                    responseBody: __content_400,
-                                    responseObject: __value_400,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
                             // Unauthorized
                             if ((int)__response.StatusCode == 401)
                             {
@@ -391,80 +380,6 @@ namespace SoundCloud
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // Not Found
-                            if ((int)__response.StatusCode == 404)
-                            {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                global::SoundCloud.Error? __value_404 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::SoundCloud.Error.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_404 = global::SoundCloud.Error.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_404 = __ex;
-                                }
-
-
-                                throw global::SoundCloud.ApiException<global::SoundCloud.Error>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    responseBody: __content_404,
-                                    responseObject: __value_404,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // Too Many Requests
-                            if ((int)__response.StatusCode == 429)
-                            {
-                                string? __content_429 = null;
-                                global::System.Exception? __exception_429 = null;
-                                global::SoundCloud.TooManyRequests? __value_429 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::SoundCloud.TooManyRequests.FromJson(__content_429, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_429 = global::SoundCloud.TooManyRequests.FromJson(__content_429, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_429 = __ex;
-                                }
-
-
-                                throw global::SoundCloud.ApiException<global::SoundCloud.TooManyRequests?>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_429,
-                                    responseBody: __content_429,
-                                    responseObject: __value_429,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -478,15 +393,22 @@ namespace SoundCloud
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
+                                ProcessReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                return new global::SoundCloud.AutoSDKHttpResponse(
+                                    var __value = global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>.FromJson(__content, JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::SoundCloud.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -506,10 +428,19 @@ namespace SoundCloud
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    return new global::SoundCloud.AutoSDKHttpResponse(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = await global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::SoundCloud.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
