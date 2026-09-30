@@ -186,23 +186,7 @@ namespace SoundCloud
 
             typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
 
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
-
-            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>),
 
             typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
 
@@ -211,6 +195,26 @@ namespace SoundCloud
             typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
 
             typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>),
+
+            typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>),
 
             typeof(global::SoundCloud.JsonConverters.OneOfJsonConverter<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>),
 
@@ -285,6 +289,8 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Playlist))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.AllOf<object, global::SoundCloud.User>), TypeInfoPropertyName = "AllOfObjectUser2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.SystemPlaylist))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.SystemPlaylists))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Playlists))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SoundCloud.Playlist>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.Activities))]
@@ -348,11 +354,13 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.GetUsersRepostsTracksAcces), TypeInfoPropertyName = "GetUsersRepostsTracksAcces2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>), TypeInfoPropertyName = "OneOfTracksIListTrack2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>), TypeInfoPropertyName = "OneOfPlaylistsIListPlaylist2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>), TypeInfoPropertyName = "OneOfSystemPlaylistsIListSystemPlaylist2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.CreateUpdatePlaylistRequestPlaylistTrack>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.ErrorError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<byte[]>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.User?>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.Track>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.SystemPlaylist>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.Playlist>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.ActivitiesCollectionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.WebProfile>))]
@@ -378,6 +386,7 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SoundCloud.GetUsersRepostsTracksAcces>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.Tracks, global::System.Collections.Generic.List<global::SoundCloud.Track>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.Playlists, global::System.Collections.Generic.List<global::SoundCloud.Playlist>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.List<global::SoundCloud.SystemPlaylist>>))]
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }

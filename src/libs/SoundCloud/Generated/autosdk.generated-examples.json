@@ -2,13 +2,13 @@
   "Examples": [
     {
       "Order": 1,
-      "Title": "Likes a playlist.",
-      "Slug": "likes-a-playlist",
+      "Title": "Likes a playlist or system playlist (station).",
+      "Slug": "likes-a-playlist-or-system-playlist-station",
       "Description": "Generated from OpenAPI examples.",
       "Language": "csharp",
-      "Code": "using var client = new SoundCloudClient(apiKey);\n\nawait client.Likes.LikesAPlaylistAsync(\n    playlistUrn: \u0022soundcloud:playlists:1212781357\u0022\n);\n\n// Example response:\n// {\n//   \u0022status\u0022: \u0022200 - OK\u0022\n// }",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nawait client.Likes.LikesAPlaylistOrSystemPlaylistStationAsync(\n    playlistUrn: \u0022soundcloud:playlists:1212781357\u0022\n);\n\n// Example response:\n// {\n//   \u0022status\u0022: \u0022200 - OK\u0022\n// }",
       "Format": "sdk",
-      "OperationId": "LikesAPlaylist",
+      "OperationId": "LikesAPlaylistOrSystemPlaylistStation",
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
@@ -24,13 +24,13 @@
     },
     {
       "Order": 3,
-      "Title": "Unlikes a playlist.",
-      "Slug": "unlikes-a-playlist",
+      "Title": "Unlikes a playlist or system playlist (station).",
+      "Slug": "unlikes-a-playlist-or-system-playlist-station",
       "Description": "Generated from OpenAPI examples.",
       "Language": "csharp",
-      "Code": "using var client = new SoundCloudClient(apiKey);\n\nawait client.Likes.UnlikesAPlaylistAsync(\n    playlistUrn: \u0022soundcloud:playlists:1212781357\u0022\n);\n\n// Example response:\n// {\n//   \u0022status\u0022: \u0022200 - OK\u0022\n// }",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nawait client.Likes.UnlikesAPlaylistOrSystemPlaylistStationAsync(\n    playlistUrn: \u0022soundcloud:playlists:1212781357\u0022\n);\n\n// Example response:\n// {\n//   \u0022status\u0022: \u0022200 - OK\u0022\n// }",
       "Format": "sdk",
-      "OperationId": "UnlikesAPlaylist",
+      "OperationId": "UnlikesAPlaylistOrSystemPlaylistStation",
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
@@ -90,6 +90,17 @@
     },
     {
       "Order": 9,
+      "Title": "Returns a list of liked system playlists (stations) of the authenticated user.",
+      "Slug": "returns-a-list-of-liked-system-playlists-stations-of-the-authenticated-user",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "csharp",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Me.ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUserAsync(\n    limit: 2,\n    linkedPartitioning: true\n);\n\n// Example response:\n// {\n//   \u0022collection\u0022: {\n//     \u0022$ref\u0022: \u0022#/components/examples/SystemPlaylist/value\u0022\n//   },\n//   \u0022next_href\u0022: \u0022https://api.soundcloud.com/collection?page_size=10\\u0026cursor=1234567\u0022\n// }",
+      "Format": "sdk",
+      "OperationId": "ReturnsAListOfLikedSystemPlaylistsStationsOfTheAuthenticatedUser",
+      "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 10,
       "Title": "Returns a list of playlist reposts of the authenticated user.",
       "Slug": "returns-a-list-of-playlist-reposts-of-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -100,7 +111,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 10,
+      "Order": 11,
       "Title": "Returns a list of recent tracks from users followed by the authenticated user.",
       "Slug": "returns-a-list-of-recent-tracks-from-users-followed-by-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -111,7 +122,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 11,
+      "Order": 12,
       "Title": "Returns a list of track reposts of the authenticated user.",
       "Slug": "returns-a-list-of-track-reposts-of-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -122,7 +133,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 12,
+      "Order": 13,
       "Title": "Returns a list of user\u0027s tracks.",
       "Slug": "returns-a-list-of-user-s-tracks",
       "Description": "Generated from OpenAPI examples.",
@@ -133,7 +144,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 13,
+      "Order": 14,
       "Title": "Returns a list of users who are followed by the authenticated user.",
       "Slug": "returns-a-list-of-users-who-are-followed-by-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -144,7 +155,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 14,
+      "Order": 15,
       "Title": "Returns a list of users who are following the authenticated user.",
       "Slug": "returns-a-list-of-users-who-are-following-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -155,7 +166,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 15,
+      "Order": 16,
       "Title": "Returns the authenticated user\u0027s feed.",
       "Slug": "returns-the-authenticated-user-s-feed",
       "Description": "Generated from OpenAPI examples.",
@@ -166,7 +177,7 @@
       "Setup": null
     },
     {
-      "Order": 16,
+      "Order": 17,
       "Title": "Returns the authenticated user\u2019s information.",
       "Slug": "returns-the-authenticated-user-s-information",
       "Description": "Generated from OpenAPI examples.",
@@ -177,7 +188,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 17,
+      "Order": 18,
       "Title": "Returns the authenticated user\u0027s last 25 recently played tracks.",
       "Slug": "returns-the-authenticated-user-s-last-25-recently-played-tracks",
       "Description": "Returns up to 25 full track objects in reverse chronological order. Duplicate tracks are omitted, keeping only the most recent play. Tracks that are not visible to the caller are omitted. This endpoint does not support pagination or a \u0060limit\u0060 query parameter.",
@@ -188,7 +199,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 18,
+      "Order": 19,
       "Title": "Returns the authenticated user\u0027s recent track related feed.",
       "Slug": "returns-the-authenticated-user-s-recent-track-related-feed",
       "Description": "Generated from OpenAPI examples.",
@@ -199,7 +210,7 @@
       "Setup": null
     },
     {
-      "Order": 19,
+      "Order": 20,
       "Title": "Returns user\u2019s playlists (sets).",
       "Slug": "returns-user-s-playlists-sets",
       "Description": "Returns playlist info, playlist tracks and tracks owner info.",
@@ -210,7 +221,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 20,
+      "Order": 21,
       "Title": "Resolves soundcloud.com and on.soundcloud.com URLs to Resource URLs to use with the API.",
       "Slug": "resolves-soundcloud-com-and-on-soundcloud-com-urls-to-resource-urls-to-use-with-the-api",
       "Description": "Generated from OpenAPI examples.",
@@ -221,7 +232,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 21,
+      "Order": 22,
       "Title": "Revokes OAuth access for the calling application.",
       "Slug": "revokes-oauth-access-for-the-calling-application",
       "Description": "Invalidates access tokens for the client application that issued the current access token.\nReturns 400 if disconnect is not supported for the current token.",
@@ -232,7 +243,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 22,
+      "Order": 23,
       "Title": "Creates a playlist.",
       "Slug": "creates-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -243,7 +254,7 @@
       "Setup": null
     },
     {
-      "Order": 23,
+      "Order": 24,
       "Title": "Deletes a playlist.",
       "Slug": "deletes-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -254,7 +265,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 24,
+      "Order": 25,
       "Title": "Returns a collection of playlist\u0027s reposters.",
       "Slug": "returns-a-collection-of-playlist-s-reposters",
       "Description": "Generated from OpenAPI examples.",
@@ -265,7 +276,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 25,
+      "Order": 26,
       "Title": "Returns a playlist.",
       "Slug": "returns-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -276,7 +287,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 26,
+      "Order": 27,
       "Title": "Returns tracks under a playlist.",
       "Slug": "returns-tracks-under-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -287,7 +298,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 27,
+      "Order": 28,
       "Title": "Updates a playlist.",
       "Slug": "updates-a-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -298,7 +309,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 28,
+      "Order": 29,
       "Title": "Removes a repost on a playlist as the authenticated user",
       "Slug": "removes-a-repost-on-a-playlist-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -309,7 +320,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 29,
+      "Order": 30,
       "Title": "Reposts a playlist as the authenticated user",
       "Slug": "reposts-a-playlist-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -320,7 +331,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 30,
+      "Order": 31,
       "Title": "Reposts a track as the authenticated user",
       "Slug": "reposts-a-track-as-the-authenticated-user",
       "Description": "Generated from OpenAPI examples.",
@@ -331,7 +342,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 31,
+      "Order": 32,
       "Title": "Performs a playlist search based on a query",
       "Slug": "performs-a-playlist-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -342,7 +353,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 32,
+      "Order": 33,
       "Title": "Performs a track search based on a query",
       "Slug": "performs-a-track-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -353,7 +364,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 33,
+      "Order": 34,
       "Title": "Performs a user search based on a query",
       "Slug": "performs-a-user-search-based-on-a-query",
       "Description": "Generated from OpenAPI examples.",
@@ -364,7 +375,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 34,
+      "Order": 35,
       "Title": "Returns a system playlist.",
       "Slug": "returns-a-system-playlist",
       "Description": "Generated from OpenAPI examples.",
@@ -375,7 +386,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 35,
+      "Order": 36,
       "Title": "Creates or updates the storefront (Artist Storefront) of a track.",
       "Slug": "creates-or-updates-the-storefront-artist-storefront-of-a-track",
       "Description": "Creates or updates the storefront module shown on the track page. The request replaces\nthe whole storefront: optional fields (link_title, description, price) are cleared when\nomitted, so always send every value the storefront should keep. The request fails with\n403 when the authenticated user does not own the track, and also when the user does not\nhold a creator subscription that includes external purchase options. The storefront\nlinks to an external page \u2014 no payment is processed by SoundCloud.",
@@ -386,7 +397,7 @@
       "Setup": null
     },
     {
-      "Order": 36,
+      "Order": 37,
       "Title": "Deletes a track.",
       "Slug": "deletes-a-track",
       "Description": "Generated from OpenAPI examples.",
@@ -397,7 +408,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 37,
+      "Order": 38,
       "Title": "Returns a collection of track\u0027s reposters.",
       "Slug": "returns-a-collection-of-track-s-reposters",
       "Description": "Generated from OpenAPI examples.",
@@ -408,7 +419,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 38,
+      "Order": 39,
       "Title": "Returns a list of users who have favorited or liked the track.",
       "Slug": "returns-a-list-of-users-who-have-favorited-or-liked-the-track",
       "Description": "Generated from OpenAPI examples.",
@@ -419,7 +430,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 39,
+      "Order": 40,
       "Title": "Returns a track.",
       "Slug": "returns-a-track",
       "Description": "Generated from OpenAPI examples.",
@@ -430,7 +441,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 40,
+      "Order": 41,
       "Title": "Returns a track\u0027s streamable URLs (needs to keep using authentication)",
       "Slug": "returns-a-track-s-streamable-urls-needs-to-keep-using-authentication",
       "Description": "Generated from OpenAPI examples.",
@@ -441,7 +452,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 41,
+      "Order": 42,
       "Title": "Returns all related tracks of track on SoundCloud.",
       "Slug": "returns-all-related-tracks-of-track-on-soundcloud",
       "Description": "Generated from OpenAPI examples.",
@@ -452,7 +463,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 42,
+      "Order": 43,
       "Title": "Returns the comments posted on the track(track_urn).",
       "Slug": "returns-the-comments-posted-on-the-track-track-urn",
       "Description": "Generated from OpenAPI examples.",
@@ -463,7 +474,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 43,
+      "Order": 44,
       "Title": "Returns the newly created comment on success",
       "Slug": "returns-the-newly-created-comment-on-success",
       "Description": "Generated from OpenAPI examples.",
@@ -474,7 +485,7 @@
       "Setup": null
     },
     {
-      "Order": 44,
+      "Order": 45,
       "Title": "Starts playback of a preview of the track",
       "Slug": "starts-playback-of-a-preview-of-the-track",
       "Description": "Generated from OpenAPI examples.",
@@ -485,7 +496,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 45,
+      "Order": 46,
       "Title": "Updates a track\u0027s information.",
       "Slug": "updates-a-track-s-information",
       "Description": "Generated from OpenAPI examples.",
@@ -496,7 +507,7 @@
       "Setup": null
     },
     {
-      "Order": 46,
+      "Order": 47,
       "Title": "Uploads a new track.",
       "Slug": "uploads-a-new-track",
       "Description": "Generated from OpenAPI examples.",
@@ -507,7 +518,7 @@
       "Setup": null
     },
     {
-      "Order": 47,
+      "Order": 48,
       "Title": "Returns a list of user\u2019s followers.",
       "Slug": "returns-a-list-of-user-s-followers",
       "Description": "Returns a list of users that follows (user_urn).",
@@ -518,7 +529,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 48,
+      "Order": 49,
       "Title": "Returns a list of user\u2019s followings.",
       "Slug": "returns-a-list-of-user-s-followings",
       "Description": "Returns list of users that (user_urn) follows.",
@@ -529,7 +540,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 49,
+      "Order": 50,
       "Title": "Returns a list of user\u0027s liked playlists.",
       "Slug": "returns-a-list-of-user-s-liked-playlists",
       "Description": "Generated from OpenAPI examples.",
@@ -540,7 +551,18 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 50,
+      "Order": 51,
+      "Title": "Returns a list of user\u0027s liked system playlists (stations).",
+      "Slug": "returns-a-list-of-user-s-liked-system-playlists-stations",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "csharp",
+      "Code": "using var client = new SoundCloudClient(apiKey);\n\nvar response = await client.Users.ReturnsAListOfUsersLikedSystemPlaylistsStationsAsync(\n    userUrn: \u0022soundcloud:users:948745750\u0022,\n    limit: 2,\n    linkedPartitioning: true\n);\n\n// Example response:\n// {\n//   \u0022collection\u0022: {\n//     \u0022$ref\u0022: \u0022#/components/examples/SystemPlaylist/value\u0022\n//   },\n//   \u0022next_href\u0022: \u0022https://api.soundcloud.com/collection?page_size=10\\u0026cursor=1234567\u0022\n// }",
+      "Format": "sdk",
+      "OperationId": "ReturnsAListOfUsersLikedSystemPlaylistsStations",
+      "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 52,
       "Title": "Returns a list of user\u0027s liked tracks.",
       "Slug": "returns-a-list-of-user-s-liked-tracks",
       "Description": "Generated from OpenAPI examples.",
@@ -551,7 +573,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 51,
+      "Order": 53,
       "Title": "Returns a list of user\u0027s playlist reposts.",
       "Slug": "returns-a-list-of-user-s-playlist-reposts",
       "Description": "Generated from OpenAPI examples.",
@@ -562,7 +584,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 52,
+      "Order": 54,
       "Title": "Returns a list of user\u0027s playlists.",
       "Slug": "returns-a-list-of-user-s-playlists",
       "Description": "Generated from OpenAPI examples.",
@@ -573,7 +595,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 53,
+      "Order": 55,
       "Title": "Returns a list of user\u0027s track reposts.",
       "Slug": "returns-a-list-of-user-s-track-reposts",
       "Description": "Generated from OpenAPI examples.",
@@ -584,7 +606,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 54,
+      "Order": 56,
       "Title": "Returns a list of user\u0027s tracks.",
       "Slug": "returns-a-list-of-user-s-tracks",
       "Description": "Generated from OpenAPI examples.",
@@ -595,7 +617,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 55,
+      "Order": 57,
       "Title": "Returns a user.",
       "Slug": "returns-a-user",
       "Description": "Generated from OpenAPI examples.",
@@ -606,7 +628,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 56,
+      "Order": 58,
       "Title": "Returns list of user\u0027s links added to their profile (website, facebook, instagram).",
       "Slug": "returns-list-of-user-s-links-added-to-their-profile-website-facebook-instagram",
       "Description": "Generated from OpenAPI examples.",
@@ -617,7 +639,7 @@
       "Setup": "This example assumes \u0060using SoundCloud;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 57,
+      "Order": 59,
       "Title": "Returns related artist recommendations for a user on SoundCloud.",
       "Slug": "returns-related-artist-recommendations-for-a-user-on-soundcloud",
       "Description": "Generated from OpenAPI examples.",
