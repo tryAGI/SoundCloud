@@ -225,6 +225,7 @@ namespace SoundCloud
     #pragma warning restore CS3016
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OAuthToken))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.OAuthTokenGrantType), TypeInfoPropertyName = "OAuthTokenGrantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
