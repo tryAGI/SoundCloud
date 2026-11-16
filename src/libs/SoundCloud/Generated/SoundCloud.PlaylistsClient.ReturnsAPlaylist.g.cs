@@ -29,14 +29,14 @@ namespace SoundCloud
             global::System.Net.Http.HttpClient httpClient,
             ref string playlistUrn,
             ref string? secretToken,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access,
             ref bool? showTracks);
         partial void PrepareReturnsAPlaylistRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string playlistUrn,
             string? secretToken,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access,
             bool? showTracks);
         partial void ProcessReturnsAPlaylistResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -62,7 +62,7 @@ namespace SoundCloud
         public async global::System.Threading.Tasks.Task<global::SoundCloud.Playlist> ReturnsAPlaylistAsync(
             string playlistUrn,
             string? secretToken = default,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access = default,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access = default,
             bool? showTracks = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -93,7 +93,7 @@ namespace SoundCloud
         public async global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.Playlist>> ReturnsAPlaylistAsResponseAsync(
             string playlistUrn,
             string? secretToken = default,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access = default,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access = default,
             bool? showTracks = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

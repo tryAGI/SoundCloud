@@ -19,7 +19,7 @@ namespace SoundCloud
         global::System.Threading.Tasks.Task<global::SoundCloud.Playlist> ReturnsAPlaylistAsync(
             string playlistUrn,
             string? secretToken = default,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access = default,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access = default,
             bool? showTracks = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -38,7 +38,7 @@ namespace SoundCloud
         global::System.Threading.Tasks.Task<global::SoundCloud.AutoSDKHttpResponse<global::SoundCloud.Playlist>> ReturnsAPlaylistAsResponseAsync(
             string playlistUrn,
             string? secretToken = default,
-            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces2>? access = default,
+            global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? access = default,
             bool? showTracks = default,
             global::SoundCloud.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
