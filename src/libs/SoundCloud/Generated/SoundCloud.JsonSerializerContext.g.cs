@@ -76,6 +76,10 @@ namespace SoundCloud
 
             typeof(global::SoundCloud.JsonConverters.TrackUpdateFormRequestTrackLicenseNullableJsonConverter),
 
+            typeof(global::SoundCloud.JsonConverters.TrackCreationLimitedVariant2ErrorCodeJsonConverter),
+
+            typeof(global::SoundCloud.JsonConverters.TrackCreationLimitedVariant2ErrorCodeNullableJsonConverter),
+
             typeof(global::SoundCloud.JsonConverters.TrackAccessJsonConverter),
 
             typeof(global::SoundCloud.JsonConverters.TrackAccessNullableJsonConverter),
@@ -161,6 +165,8 @@ namespace SoundCloud
             typeof(global::SoundCloud.JsonConverters.GetUsersRepostsTracksAccesNullableJsonConverter),
 
             typeof(global::SoundCloud.JsonConverters.TooManyRequestsJsonConverter),
+
+            typeof(global::SoundCloud.JsonConverters.TrackCreationLimitedJsonConverter),
 
             typeof(global::SoundCloud.JsonConverters.AllOfJsonConverter<global::SoundCloud.User, object>),
 
@@ -262,6 +268,9 @@ namespace SoundCloud
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.ErrorError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.TooManyRequests), TypeInfoPropertyName = "TooManyRequests2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.TooManyRequestsVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.TrackCreationLimited), TypeInfoPropertyName = "TrackCreationLimited2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.TrackCreationLimitedVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.TrackCreationLimitedVariant2ErrorCode), TypeInfoPropertyName = "TrackCreationLimitedVariant2ErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SoundCloud.User))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     #pragma warning disable CS0618 // This registration names a deprecated API model.
