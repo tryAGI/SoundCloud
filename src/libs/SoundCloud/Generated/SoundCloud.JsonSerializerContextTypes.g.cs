@@ -190,347 +190,359 @@ namespace SoundCloud
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.User? Type38 { get; set; }
+        public global::SoundCloud.TrackCreationLimited? Type38 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTime? Type39 { get; set; }
+        public global::SoundCloud.TrackCreationLimitedVariant2? Type39 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<byte[]>? Type40 { get; set; }
+        public global::SoundCloud.TrackCreationLimitedVariant2ErrorCode? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.UserSubscription? Type41 { get; set; }
+        public global::SoundCloud.User? Type41 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.UserSubscriptionProduct? Type42 { get; set; }
+        public global::System.DateTime? Type42 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Me? Type43 { get; set; }
+        public global::System.Collections.Generic.IList<byte[]>? Type43 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.MeQuota? Type44 { get; set; }
+        public global::SoundCloud.UserSubscription? Type44 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.MeSubscription? Type45 { get; set; }
+        public global::SoundCloud.UserSubscriptionProduct? Type45 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.MeSubscriptionProduct? Type46 { get; set; }
+        public global::SoundCloud.Me? Type46 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Users? Type47 { get; set; }
+        public global::SoundCloud.MeQuota? Type47 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.User?>? Type48 { get; set; }
+        public global::SoundCloud.MeSubscription? Type48 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Track? Type49 { get; set; }
+        public global::SoundCloud.MeSubscriptionProduct? Type49 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public double? Type50 { get; set; }
+        public global::SoundCloud.Users? Type50 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public long? Type51 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.User?>? Type51 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.AllOf<global::SoundCloud.User, object>? Type52 { get; set; }
+        public global::SoundCloud.Track? Type52 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public object? Type53 { get; set; }
+        public double? Type53 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.TrackAccess? Type54 { get; set; }
+        public long? Type54 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Tracks? Type55 { get; set; }
+        public global::SoundCloud.AllOf<global::SoundCloud.User, object>? Type55 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.Track>? Type56 { get; set; }
+        public object? Type56 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Playlist? Type57 { get; set; }
+        public global::SoundCloud.TrackAccess? Type57 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.AllOf<object, global::SoundCloud.User>? Type58 { get; set; }
+        public global::SoundCloud.Tracks? Type58 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.SystemPlaylist? Type59 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.Track>? Type59 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.SystemPlaylists? Type60 { get; set; }
+        public global::SoundCloud.Playlist? Type60 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>? Type61 { get; set; }
+        public global::SoundCloud.AllOf<object, global::SoundCloud.User>? Type61 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Playlists? Type62 { get; set; }
+        public global::SoundCloud.SystemPlaylist? Type62 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.Playlist>? Type63 { get; set; }
+        public global::SoundCloud.SystemPlaylists? Type63 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Activities? Type64 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>? Type64 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.ActivitiesCollectionItem>? Type65 { get; set; }
+        public global::SoundCloud.Playlists? Type65 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.ActivitiesCollectionItem? Type66 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.Playlist>? Type66 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.AnyOf<global::SoundCloud.Track, global::SoundCloud.Playlist>? Type67 { get; set; }
+        public global::SoundCloud.Activities? Type67 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.WebProfile>? Type68 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.ActivitiesCollectionItem>? Type68 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.WebProfile? Type69 { get; set; }
+        public global::SoundCloud.ActivitiesCollectionItem? Type69 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Comment? Type70 { get; set; }
+        public global::SoundCloud.AnyOf<global::SoundCloud.Track, global::SoundCloud.Playlist>? Type70 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.CommentUser? Type71 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.WebProfile>? Type71 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Comments? Type72 { get; set; }
+        public global::SoundCloud.WebProfile? Type72 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.Comment>? Type73 { get; set; }
+        public global::SoundCloud.Comment? Type73 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.Streams? Type74 { get; set; }
+        public global::SoundCloud.CommentUser? Type74 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.AllOf<global::SoundCloud.TrackDataRequest, object>? Type75 { get; set; }
+        public global::SoundCloud.Comments? Type75 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object>? Type76 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.Comment>? Type76 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.CreateTracksCommentsRequest? Type77 { get; set; }
+        public global::SoundCloud.Streams? Type77 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.CreateTracksCommentsRequestComment? Type78 { get; set; }
+        public global::SoundCloud.AllOf<global::SoundCloud.TrackDataRequest, object>? Type78 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.OneOf<string, double?>? Type79 { get; set; }
+        public global::SoundCloud.AllOf<global::SoundCloud.CreateUpdatePlaylistFormRequest, object>? Type79 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesAcces>? Type80 { get; set; }
+        public global::SoundCloud.CreateTracksCommentsRequest? Type80 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeActivitiesAcces? Type81 { get; set; }
+        public global::SoundCloud.CreateTracksCommentsRequestComment? Type81 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesAllOwnAcces>? Type82 { get; set; }
+        public global::SoundCloud.OneOf<string, double?>? Type82 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeActivitiesAllOwnAcces? Type83 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesAcces>? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesTracksAcces>? Type84 { get; set; }
+        public global::SoundCloud.GetMeActivitiesAcces? Type84 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeActivitiesTracksAcces? Type85 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesAllOwnAcces>? Type85 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFeedAcces>? Type86 { get; set; }
+        public global::SoundCloud.GetMeActivitiesAllOwnAcces? Type86 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeFeedAcces? Type87 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeActivitiesTracksAcces>? Type87 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFeedTracksAcces>? Type88 { get; set; }
+        public global::SoundCloud.GetMeActivitiesTracksAcces? Type88 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeFeedTracksAcces? Type89 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFeedAcces>? Type89 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeRecentlyPlayedTracksAcces>? Type90 { get; set; }
+        public global::SoundCloud.GetMeFeedAcces? Type90 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeRecentlyPlayedTracksAcces? Type91 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFeedTracksAcces>? Type91 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeLikesTracksAcces>? Type92 { get; set; }
+        public global::SoundCloud.GetMeFeedTracksAcces? Type92 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeLikesTracksAcces? Type93 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeRecentlyPlayedTracksAcces>? Type93 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFollowingsTracksAcces>? Type94 { get; set; }
+        public global::SoundCloud.GetMeRecentlyPlayedTracksAcces? Type94 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeFollowingsTracksAcces? Type95 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeLikesTracksAcces>? Type95 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeTracksSort? Type96 { get; set; }
+        public global::SoundCloud.GetMeLikesTracksAcces? Type96 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeRepostsTracksAcces>? Type97 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeFollowingsTracksAcces>? Type97 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetMeRepostsTracksAcces? Type98 { get; set; }
+        public global::SoundCloud.GetMeFollowingsTracksAcces? Type98 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetTracksBpm? Type99 { get; set; }
+        public global::SoundCloud.GetMeTracksSort? Type99 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetTracksDuration? Type100 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetMeRepostsTracksAcces>? Type100 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetTracksCreatedAt? Type101 { get; set; }
+        public global::SoundCloud.GetMeRepostsTracksAcces? Type101 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetTracksAcces>? Type102 { get; set; }
+        public global::SoundCloud.GetTracksBpm? Type102 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetTracksAcces? Type103 { get; set; }
+        public global::SoundCloud.GetTracksDuration? Type103 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? Type104 { get; set; }
+        public global::SoundCloud.GetTracksCreatedAt? Type104 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetPlaylistsAcces? Type105 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetTracksAcces>? Type105 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsTracksAcces>? Type106 { get; set; }
+        public global::SoundCloud.GetTracksAcces? Type106 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetPlaylistsTracksAcces? Type107 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsAcces>? Type107 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetTracksRelatedAcces>? Type108 { get; set; }
+        public global::SoundCloud.GetPlaylistsAcces? Type108 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetTracksRelatedAcces? Type109 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetPlaylistsTracksAcces>? Type109 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetSystemPlaylistsAcces>? Type110 { get; set; }
+        public global::SoundCloud.GetPlaylistsTracksAcces? Type110 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetSystemPlaylistsAcces? Type111 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetTracksRelatedAcces>? Type111 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersPlaylistsAcces>? Type112 { get; set; }
+        public global::SoundCloud.GetTracksRelatedAcces? Type112 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetUsersPlaylistsAcces? Type113 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetSystemPlaylistsAcces>? Type113 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersTracksAcces>? Type114 { get; set; }
+        public global::SoundCloud.GetSystemPlaylistsAcces? Type114 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetUsersTracksAcces? Type115 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersPlaylistsAcces>? Type115 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetUsersTracksSort? Type116 { get; set; }
+        public global::SoundCloud.GetUsersPlaylistsAcces? Type116 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersLikesTracksAcces>? Type117 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersTracksAcces>? Type117 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetUsersLikesTracksAcces? Type118 { get; set; }
+        public global::SoundCloud.GetUsersTracksAcces? Type118 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersRepostsTracksAcces>? Type119 { get; set; }
+        public global::SoundCloud.GetUsersTracksSort? Type119 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.GetUsersRepostsTracksAcces? Type120 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersLikesTracksAcces>? Type120 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.OneOf<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>? Type121 { get; set; }
+        public global::SoundCloud.GetUsersLikesTracksAcces? Type121 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.OneOf<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>? Type122 { get; set; }
+        public global::System.Collections.Generic.IList<global::SoundCloud.GetUsersRepostsTracksAcces>? Type122 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>? Type123 { get; set; }
+        public global::SoundCloud.GetUsersRepostsTracksAcces? Type123 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::SoundCloud.OneOf<global::SoundCloud.Tracks, global::System.Collections.Generic.IList<global::SoundCloud.Track>>? Type124 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::SoundCloud.OneOf<global::SoundCloud.Playlists, global::System.Collections.Generic.IList<global::SoundCloud.Playlist>>? Type125 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::SoundCloud.OneOf<global::SoundCloud.SystemPlaylists, global::System.Collections.Generic.IList<global::SoundCloud.SystemPlaylist>>? Type126 { get; set; }
 
         /// <summary>
         ///
